@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+</head>
+<body>
+    <script>
+        function calc_imc(){
+            var altura = document.imcForm.altura.value;
+            var peso = document.imcForm.peso.value;
+
+            var calcAlt = (altura * altura)
+            var calc = (peso / calcAlt)
+
+            if(calc < 18.5){
+                alert(`Magreza. Seu IMC é: ${calc}`)
+            } 
+            else if (calc >= 18.5 && calc < 24.9){
+                alert(`Normal: ${calc}`)
+            }
+            else if (calc >= 25 && calc < 29.9){
+                alert(`Sobrepeso: ${calc}`)
+            }
+            else if (calc >= 30 && calc < 39.0){
+                alert(`Obesidade II`)
+            }
+            else if (calc > 40){
+                alert(`Obesidade III(grave)`)
+            }
+        }
+    </script>
+    <form name="imcForm" id="imcForm" action="#" style="text-align: center;">
+        <span><strong style="font-size: 20px;">Altura: </strong> </span> <br>
+        <input type="text" id="altura" name="altura" style="border-radius: 5px; border-color: gray;"> <br> <br>
+        <span><strong style="font-size: 20px;">Peso: </strong> </span> <br>
+        <input type="text" id="peso" name="peso" style="border-radius: 5px; border-color: gray;"> <br> <br>
+        <input name="Enviar" type="submit" value="Calcular" onclick="calc_imc()"/ style="font-size: 18px; border-radius: 5px;">
+    </form>
+</body>
+</html>
