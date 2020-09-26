@@ -1,1 +1,1 @@
-imc_calc
+Calculadora de IMC(Índice de massa corporal)
